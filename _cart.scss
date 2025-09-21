@@ -1,0 +1,311 @@
+.top-cart {
+    background-image: url(img/cart-top.jpeg);
+    @include background-image-settings;
+
+    &__title {
+        padding-top: 127px;
+        padding-bottom: 126px;
+        @include style-top-title-text;
+    }
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    margin-top: 64px;
+
+    &__content {
+        grid-column: span 8;
+
+        & > :nth-child(3n) {
+            padding-top: 32px;
+            padding-bottom: 0;
+        }
+    }
+
+    &__name-box {
+        margin-left: 3px;
+        margin-right: 27px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+    }
+
+    &__item {
+        max-width: 786px;
+        border-top: 0.5px solid rgb(202, 205, 216);
+        padding-top: 25px;
+        padding-bottom: 32px;
+        display: flex;
+        align-items: center;
+
+        &_tooltip {
+            border: none;
+            padding: 0;
+        }
+    }
+
+    &__img {
+        margin-right: 32px;
+
+        &_tooltip {
+            margin-right: 24px;
+            width: 144px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        gap: 235px;
+
+        &_tooltip {
+            gap: 48px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &__info-box {
+        display: flex;
+        gap: 15px;
+        flex-direction: column;
+        max-width: 276px;
+
+        &_tooltip {
+            gap: 12px;
+            width: 195px;
+        }
+    }
+
+    &__product-name {
+        @include product-name-style-text;
+    }
+
+    &__product-discription {
+        @include style-product-description-text;
+    }
+
+    &__produсt-price {
+        color: rgb(5, 5, 5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    &__link-box {
+        display: flex;
+        gap: 30px;
+
+        &_tooltip {
+            margin-top: 42px;
+        }
+    }
+
+    &__link {
+        color: #000;
+        font-size: 14px;
+        font-weight: 400;
+        @include link-decor-revers;
+
+        &:hover {
+            color: #888;
+        }
+    }
+
+    &__input {
+        position: relative;
+        display: flex;
+
+        &-button {
+            background: transparent;
+            cursor: pointer;
+            border: none;
+
+            &:hover &-svg path {
+                stroke: #000;
+            }
+            
+            &-svg_up {
+                position: absolute;
+                top: 16px;
+                right: 20px;
+            }
+
+            &-svg_down {
+                position: absolute;
+                top: 32px;
+                right: 20px;
+            }
+        }
+
+        &-box {
+            width: 71px;
+            height: 51px;
+            padding: 20px;
+            appearance: none;
+            border-radius: 6px;
+            background-color: #F7F6F6;
+            border: none;
+            color: rgb(0, 0, 0);
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 210%;
+            outline: none;
+
+            &[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            &[type="number"] {
+                -moz-appearance: textfield;
+            }
+        }
+    }
+
+    &__button-box {
+        margin-top: 50px;
+        display: flex;
+        gap: 7px;
+    }
+
+    &__button {
+        width: 200px;
+        height: 37px;
+        font-family: inherit;
+        background-color: transparent;
+        border: 1px solid #000;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        @include button-animation;
+
+        &:hover {
+            @include button-hover-style;
+        }
+    }
+
+    &__form {
+        padding-top: 42px;
+        padding-bottom: 148px;
+        border-radius: 20px;
+        background: rgb(247, 246, 246);
+        grid-column: span 4;
+
+        &-fieldset {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: none;
+        }
+
+        &-title {
+            display: contents;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            color: #000;
+        }
+
+        &-label {
+            margin-left: 27px;
+            margin-right: 64px;
+            padding-top: 35px;
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                padding-top: 41px;
+            }
+        }
+
+        &-input {
+            width: 288px;
+            padding-left: 1px;
+            padding-bottom: 2px;
+            font-family: inherit;
+            border: none;
+            background-color: transparent;
+            border-bottom: 1px solid rgb(202, 205, 216);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            color: #000;
+
+            &::placeholder {
+                color: #000;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &-conteiner {
+            margin-top: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+
+            &_tooltip {
+                margin-top: 0;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 48px;
+            }
+        }
+
+        &-text {
+            padding-top: 2.5px;
+            padding-bottom: 2.5px;
+            color: #000;
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 29px;
+
+            .bold {
+                font-weight: 500;
+            }
+
+            &_tooltip {
+                line-height: 150%;
+                letter-spacing: calc(24px * 0.03);
+            }
+        }
+
+        &-button {
+            font-family: inherit;
+            background-color: transparent;
+            border: 1px solid rgb(4, 4, 4);
+            border-radius: 20px;
+            padding: 10px 76px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #000;
+            animation: shake 1.5s ease-in-out infinite;
+            @include button-animation;
+
+            &:hover {
+                @include button-hover-style;
+            }
+
+            &_tooltip {
+                padding: 10px 34px;
+            }
+        }
+    }
+}
+
+.link-box {
+    &__link_mob {
+        display: none;
+    }
+}

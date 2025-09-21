@@ -1,0 +1,91 @@
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 786px/2);
+        padding-right: calc(50% - 786px/2);
+    }
+
+    .menu__line_tooltip-container.open .cart-tooltip {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .for {
+        &__item {
+            height: 268px;
+        }
+    }
+
+    .catalog {
+        margin-top: 64px;
+    }
+
+    .product-content {
+        justify-content: flex-start;
+        column-gap: 29px;
+        row-gap: 39px;
+    }
+
+    .footer {
+        &__logo {
+            display: none;
+        }
+
+        &__content {
+            gap: 179px;
+        }
+    }
+
+    // Каталог
+
+    .filter {
+        &__box-form{
+            right: -240px;
+        }
+    }
+
+    .catalog-page-product-box {
+        column-gap: 29px;
+        row-gap: 30px;
+    }
+    
+    // Корзина
+
+    .cart {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0;
+
+        &__button-box {
+            margin-top: 32px;
+        }
+
+        &__form {
+            margin-top: 64px;
+            grid-column: span none;
+
+            &-label {
+                margin-right: 61px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 833px) {
+    .center {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .product {
+        width: 345px;
+    }
+    .footer {
+        &__content {
+            gap: 141px;
+        }
+
+        &__info {
+            gap: 102px;
+        }
+    }
+}
